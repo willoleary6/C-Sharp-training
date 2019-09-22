@@ -1,0 +1,10 @@
+C:\SourceCode\C-Sharp-training\basic_operations\bin\Debug\netcoreapp2.1\basic_operations.deps.json
+C:\SourceCode\C-Sharp-training\basic_operations\bin\Debug\netcoreapp2.1\basic_operations.runtimeconfig.json
+C:\SourceCode\C-Sharp-training\basic_operations\bin\Debug\netcoreapp2.1\basic_operations.runtimeconfig.dev.json
+C:\SourceCode\C-Sharp-training\basic_operations\bin\Debug\netcoreapp2.1\basic_operations.dll
+C:\SourceCode\C-Sharp-training\basic_operations\bin\Debug\netcoreapp2.1\basic_operations.pdb
+C:\SourceCode\C-Sharp-training\basic_operations\obj\Debug\netcoreapp2.1\basic_operations.csproj.CoreCompileInputs.cache
+C:\SourceCode\C-Sharp-training\basic_operations\obj\Debug\netcoreapp2.1\basic_operations.AssemblyInfoInputs.cache
+C:\SourceCode\C-Sharp-training\basic_operations\obj\Debug\netcoreapp2.1\basic_operations.AssemblyInfo.cs
+C:\SourceCode\C-Sharp-training\basic_operations\obj\Debug\netcoreapp2.1\basic_operations.dll
+C:\SourceCode\C-Sharp-training\basic_operations\obj\Debug\netcoreapp2.1\basic_operations.pdb

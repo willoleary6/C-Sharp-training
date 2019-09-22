@@ -1,0 +1,11 @@
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\bin\Debug\netcoreapp2.1\hello_world.deps.json
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\bin\Debug\netcoreapp2.1\hello_world.runtimeconfig.json
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\bin\Debug\netcoreapp2.1\hello_world.runtimeconfig.dev.json
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\bin\Debug\netcoreapp2.1\hello_world.dll
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\bin\Debug\netcoreapp2.1\hello_world.pdb
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\obj\Debug\netcoreapp2.1\hello_world.csprojAssemblyReference.cache
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\obj\Debug\netcoreapp2.1\hello_world.csproj.CoreCompileInputs.cache
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\obj\Debug\netcoreapp2.1\hello_world.AssemblyInfoInputs.cache
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\obj\Debug\netcoreapp2.1\hello_world.AssemblyInfo.cs
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\obj\Debug\netcoreapp2.1\hello_world.dll
+C:\SourceCode\C-Sharp-training\hello_world\hello_world\obj\Debug\netcoreapp2.1\hello_world.pdb
