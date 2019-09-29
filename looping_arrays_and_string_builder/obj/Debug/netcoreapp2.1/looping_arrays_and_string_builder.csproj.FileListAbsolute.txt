@@ -1,0 +1,11 @@
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\obj\Debug\netcoreapp2.1\looping_arrays_and_string_builder.csprojAssemblyReference.cache
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\obj\Debug\netcoreapp2.1\looping_arrays_and_string_builder.csproj.CoreCompileInputs.cache
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\obj\Debug\netcoreapp2.1\looping_arrays_and_string_builder.AssemblyInfoInputs.cache
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\obj\Debug\netcoreapp2.1\looping_arrays_and_string_builder.AssemblyInfo.cs
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\bin\Debug\netcoreapp2.1\looping_arrays_and_string_builder.deps.json
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\bin\Debug\netcoreapp2.1\looping_arrays_and_string_builder.runtimeconfig.json
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\bin\Debug\netcoreapp2.1\looping_arrays_and_string_builder.runtimeconfig.dev.json
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\bin\Debug\netcoreapp2.1\looping_arrays_and_string_builder.dll
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\bin\Debug\netcoreapp2.1\looping_arrays_and_string_builder.pdb
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\obj\Debug\netcoreapp2.1\looping_arrays_and_string_builder.dll
+C:\SourceCode\C-Sharp-training\looping_arrays_and_string_builder\obj\Debug\netcoreapp2.1\looping_arrays_and_string_builder.pdb
