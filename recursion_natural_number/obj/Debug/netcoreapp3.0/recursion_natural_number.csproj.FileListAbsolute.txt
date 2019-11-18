@@ -1,0 +1,11 @@
+C:\SourceCode\C-Sharp-training\recursion_natural_number\bin\Debug\netcoreapp3.0\recursion_natural_number.exe
+C:\SourceCode\C-Sharp-training\recursion_natural_number\bin\Debug\netcoreapp3.0\recursion_natural_number.deps.json
+C:\SourceCode\C-Sharp-training\recursion_natural_number\bin\Debug\netcoreapp3.0\recursion_natural_number.runtimeconfig.json
+C:\SourceCode\C-Sharp-training\recursion_natural_number\bin\Debug\netcoreapp3.0\recursion_natural_number.runtimeconfig.dev.json
+C:\SourceCode\C-Sharp-training\recursion_natural_number\bin\Debug\netcoreapp3.0\recursion_natural_number.dll
+C:\SourceCode\C-Sharp-training\recursion_natural_number\bin\Debug\netcoreapp3.0\recursion_natural_number.pdb
+C:\SourceCode\C-Sharp-training\recursion_natural_number\obj\Debug\netcoreapp3.0\recursion_natural_number.csprojAssemblyReference.cache
+C:\SourceCode\C-Sharp-training\recursion_natural_number\obj\Debug\netcoreapp3.0\recursion_natural_number.AssemblyInfoInputs.cache
+C:\SourceCode\C-Sharp-training\recursion_natural_number\obj\Debug\netcoreapp3.0\recursion_natural_number.AssemblyInfo.cs
+C:\SourceCode\C-Sharp-training\recursion_natural_number\obj\Debug\netcoreapp3.0\recursion_natural_number.dll
+C:\SourceCode\C-Sharp-training\recursion_natural_number\obj\Debug\netcoreapp3.0\recursion_natural_number.pdb

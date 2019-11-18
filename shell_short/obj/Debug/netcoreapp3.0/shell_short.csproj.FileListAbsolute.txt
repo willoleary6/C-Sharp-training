@@ -1,0 +1,11 @@
+C:\SourceCode\C-Sharp-training\shell_short\bin\Debug\netcoreapp3.0\shell_short.exe
+C:\SourceCode\C-Sharp-training\shell_short\bin\Debug\netcoreapp3.0\shell_short.deps.json
+C:\SourceCode\C-Sharp-training\shell_short\bin\Debug\netcoreapp3.0\shell_short.runtimeconfig.json
+C:\SourceCode\C-Sharp-training\shell_short\bin\Debug\netcoreapp3.0\shell_short.runtimeconfig.dev.json
+C:\SourceCode\C-Sharp-training\shell_short\bin\Debug\netcoreapp3.0\shell_short.dll
+C:\SourceCode\C-Sharp-training\shell_short\bin\Debug\netcoreapp3.0\shell_short.pdb
+C:\SourceCode\C-Sharp-training\shell_short\obj\Debug\netcoreapp3.0\shell_short.csprojAssemblyReference.cache
+C:\SourceCode\C-Sharp-training\shell_short\obj\Debug\netcoreapp3.0\shell_short.AssemblyInfoInputs.cache
+C:\SourceCode\C-Sharp-training\shell_short\obj\Debug\netcoreapp3.0\shell_short.AssemblyInfo.cs
+C:\SourceCode\C-Sharp-training\shell_short\obj\Debug\netcoreapp3.0\shell_short.dll
+C:\SourceCode\C-Sharp-training\shell_short\obj\Debug\netcoreapp3.0\shell_short.pdb
