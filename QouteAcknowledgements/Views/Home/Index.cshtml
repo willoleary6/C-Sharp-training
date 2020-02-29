@@ -1,0 +1,24 @@
+﻿@model  IEnumerable<QouteAcknowledgements.Models.Qoute>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <h2> Whats the craic bois??</h2>
+        <ul>
+            @foreach (var item in Model)
+            {
+
+            <li>
+                @Html.DisplayFor(modelItem => item.QouteID) 
+                - 
+                @Html.DisplayFor(modelItem => item.QouteText)
+                | @Html.ActionLink("Acknowledge", "Acknowledge", new { id = item.QouteID })
+            </li>
+
+            }
+        </ul>
+        </div>

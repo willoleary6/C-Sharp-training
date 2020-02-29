@@ -1,0 +1,11 @@
+C:\SourceCode\C-Sharp-training\HelloWorld\bin\Debug\netcoreapp3.0\HelloWorld.exe
+C:\SourceCode\C-Sharp-training\HelloWorld\bin\Debug\netcoreapp3.0\HelloWorld.deps.json
+C:\SourceCode\C-Sharp-training\HelloWorld\bin\Debug\netcoreapp3.0\HelloWorld.runtimeconfig.json
+C:\SourceCode\C-Sharp-training\HelloWorld\bin\Debug\netcoreapp3.0\HelloWorld.runtimeconfig.dev.json
+C:\SourceCode\C-Sharp-training\HelloWorld\bin\Debug\netcoreapp3.0\HelloWorld.dll
+C:\SourceCode\C-Sharp-training\HelloWorld\bin\Debug\netcoreapp3.0\HelloWorld.pdb
+C:\SourceCode\C-Sharp-training\HelloWorld\obj\Debug\netcoreapp3.0\HelloWorld.csprojAssemblyReference.cache
+C:\SourceCode\C-Sharp-training\HelloWorld\obj\Debug\netcoreapp3.0\HelloWorld.AssemblyInfoInputs.cache
+C:\SourceCode\C-Sharp-training\HelloWorld\obj\Debug\netcoreapp3.0\HelloWorld.AssemblyInfo.cs
+C:\SourceCode\C-Sharp-training\HelloWorld\obj\Debug\netcoreapp3.0\HelloWorld.dll
+C:\SourceCode\C-Sharp-training\HelloWorld\obj\Debug\netcoreapp3.0\HelloWorld.pdb
