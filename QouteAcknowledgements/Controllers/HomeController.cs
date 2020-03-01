@@ -13,30 +13,34 @@ namespace QouteAcknowledgements.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private QouteDBContext db = new QouteDBContext();
-        private Qoute TestQuote = new Qoute();
 
- 
+       
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
             Debug.WriteLine("test!");
         }
 
-        public IActionResult Index()
-        {
-            Debug.WriteLine("Action result!");
-   
-            var TestQuote = new Qoute { QouteID = 0, QouteText = "Shakespeare", QuoteAcknowledment = false };
-            /* remove me when adding the sql stuff */
-            foreach (var entity in db.UnacknowledgedQoutes)
-                db.UnacknowledgedQoutes.Remove(entity);
-            db.SaveChanges();
+        
 
-            db.UnacknowledgedQoutes.Add(TestQuote);
-            db.SaveChanges();
+        public IActionResult Index(int? id)
+        {
+            // ok figured out actions, now to add some logic for transformations
+            if (id != null)
+            {
+                // reset list
+                if (id < 0)
+                {
+                    db.reset();
+                }
+                Debug.WriteLine("Well cowboy " + id);
+                // reinitialise data going to view
+                db = new QouteDBContext();
+            }
             
-            return View(db.UnacknowledgedQoutes.ToList());
+            return View(db.UnacknowledgedQoutes);
         }
+
 
         public IActionResult Privacy()
         {

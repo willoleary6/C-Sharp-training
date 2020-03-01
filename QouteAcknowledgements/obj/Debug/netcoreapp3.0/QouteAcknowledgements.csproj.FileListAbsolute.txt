@@ -64,4 +64,11 @@ C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\run
 C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
 C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\BouncyCastle.Crypto.dll
+C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\Google.Protobuf.dll
+C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\MySql.Data.dll
+C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\Ubiety.Dns.Core.dll
+C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\Renci.SshNet.dll
+C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\SshNet.Security.Cryptography.dll
+C:\SourceCode\C-Sharp-training\QouteAcknowledgements\bin\Debug\netcoreapp3.0\System.Xml.XPath.XmlDocument.dll
 C:\SourceCode\C-Sharp-training\QouteAcknowledgements\obj\Debug\netcoreapp3.0\QouteAcknowledgements.MvcApplicationPartsAssemblyInfo.cache
