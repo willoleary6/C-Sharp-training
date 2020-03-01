@@ -21,14 +21,14 @@ namespace QouteAcknowledgements.Controllers
         private readonly ILogger<HomeController> _logger;
         private QouteDBContext db = new QouteDBContext();
 
-       
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
             Debug.WriteLine("test!");
         }
 
-        
+
 
         public IActionResult Index(int? id)
         {
@@ -40,12 +40,17 @@ namespace QouteAcknowledgements.Controllers
                 {
                     db.reset();
                 }
+                else
+                {
+                    Debug.WriteLine("ACKING");
+                    db.acknowledgeQuote((int)id);
+                }
                 Debug.WriteLine("Well cowboy " + id);
                 // reinitialise data going to view
                 db = new QouteDBContext();
             }
             /* for the moment I am just going to put them in a stack */
-            
+
             // Build the model
             var model = new ExampleViewModel()
             {
@@ -54,7 +59,7 @@ namespace QouteAcknowledgements.Controllers
                 CollectionA = db.UnacknowledgedQoutes,
                 CollectionB = db.AcknowledgedQoutes,
             };
-     
+
             return View(model);
         }
 

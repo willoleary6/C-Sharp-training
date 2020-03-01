@@ -203,6 +203,30 @@ namespace QouteAcknowledgements.Models
             }
         }
 
+
+
+        public void acknowledgeQuote(int id)
+        {
+            string query = "UPDATE qoutes SET acknowledged = 1 where id = "+id;
+
+
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                cmd.ExecuteReader();
+
+                //close Connection
+                this.CloseConnection();
+
+               
+
+            }
+        }
+
     }
 
         public class QouteDBContext: DbContext
@@ -217,26 +241,13 @@ namespace QouteAcknowledgements.Models
         public QouteDBContext()
             {
 
-                Debug.WriteLine("Action result!");
 
             DBConnect connectionToDatabase = new DBConnect();
             List<Qoute> listOfUnAcknowledgedQoutes = connectionToDatabase.getUnacknowledgedQuotes();
-
             List<Qoute> listOfAcknowledgedQoutes = connectionToDatabase.getAcknowledgedQuotes();
-            /*
-             // remove me when adding the sql stuff 
-             foreach (var entity in UnacknowledgedQoutes)
-                 UnacknowledgedQoutes.Remove(entity);
-             this.SaveChanges();
-            */
-            /* add the list to the dbset*/
-            /*
-            foreach(var qoute in listOfUnAcknowledgedQoutes)
-            {
-                UnacknowledgedQoutes.Add(qoute);
-            }
-            */
+
             UnacknowledgedQoutes = listOfUnAcknowledgedQoutes;
+            acknowledgedQoutes = listOfAcknowledgedQoutes;
                 //UnacknowledgedQoutes.Add(TestQuote);
                 this.SaveChanges();
             }
@@ -247,8 +258,12 @@ namespace QouteAcknowledgements.Models
                 connectionToDatabase.resetQuotes();
             }
 
-
-        }
+            public void acknowledgeQuote(int id)
+            {
+                DBConnect connectionToDatabase = new DBConnect();
+                connectionToDatabase.acknowledgeQuote(id);
+            }
+    }
   
 
 }
