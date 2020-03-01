@@ -135,6 +135,50 @@ namespace QouteAcknowledgements.Models
             }
         }
 
+        public List<Qoute> getAcknowledgedQuotes()
+        {
+            string query = "SELECT * FROM qoutes where acknowledged = 1";
+
+            //Create a list to store the result
+            List<Qoute> list = new List<Qoute>();
+
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    // temporary variable for readabilty
+                    Qoute newQuote = new Qoute
+                    {
+                        QouteID = (int)dataReader["id"],
+                        QouteText = (string)dataReader["quote"],
+                        QuoteAcknowledment = (bool)dataReader["acknowledged"]
+                    };
+                    list.Add(newQuote);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+
         public void resetQuotes()
         {
             string query = "UPDATE qoutes SET acknowledged = 0";
@@ -163,16 +207,22 @@ namespace QouteAcknowledgements.Models
 
         public class QouteDBContext: DbContext
         {
-            public List<Qoute> UnacknowledgedQoutes;
-            /* constructor that populates the qoutes dbset */
-            public QouteDBContext()
+        private List<Qoute> unacknowledgedQoutes;
+        private List<Qoute> acknowledgedQoutes;
+
+        public List<Qoute> UnacknowledgedQoutes { get => unacknowledgedQoutes; set => unacknowledgedQoutes = value; }
+        public List<Qoute> AcknowledgedQoutes { get => acknowledgedQoutes; set => acknowledgedQoutes = value; }
+
+        /* constructor that populates the qoutes dbset */
+        public QouteDBContext()
             {
 
                 Debug.WriteLine("Action result!");
 
             DBConnect connectionToDatabase = new DBConnect();
-                List<Qoute> listOfUnAcknowledgedQoutes = connectionToDatabase.getUnacknowledgedQuotes();
+            List<Qoute> listOfUnAcknowledgedQoutes = connectionToDatabase.getUnacknowledgedQuotes();
 
+            List<Qoute> listOfAcknowledgedQoutes = connectionToDatabase.getAcknowledgedQuotes();
             /*
              // remove me when adding the sql stuff 
              foreach (var entity in UnacknowledgedQoutes)

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<QouteAcknowledgements.Models.Qoute>
+﻿@model QouteAcknowledgements.Controllers.ExampleViewModel
     @{
         ViewData["Title"] = "Home Page";
     }
@@ -10,21 +10,49 @@
         <input type="button"
                value="Reset"
                onclick="location.href='@Url.Action("Index", new { id = -1 })'">
-        <ul>
-            @foreach (var item in Model)
-            {
+        
+        <div>
+            <ul style="width:45%; float:left;">
 
-                <li>
-                    @Html.DisplayFor(modelItem => item.QouteID)
-                    -
-                    @Html.DisplayFor(modelItem => item.QouteText)
-                    <input type="button"
-                           value="Acknowledge"
-                           onclick="location.href='@Url.Action("Index", new { id = item.QouteID })'">
+                @if (Model.CollectionA != null)
+                {
+
+                    @foreach (var item in Model.CollectionA.ToList())
+                    {
+
+                        <li>
+                            @Html.DisplayFor(modelItem => item.QouteID)
+                            -
+                            @Html.DisplayFor(modelItem => item.QouteText)
+                            <input type="button"
+                                   value="Acknowledge"
+                                   onclick="location.href='@Url.Action("Index", new { id = item.QouteID })'">
 
 
-                </li>
+                        </li>
 
-            }
-        </ul>
+                    }
+                }
+            </ul>
+
+            <ul style="width:45%; float:right;">
+                @if (Model.CollectionB!= null)
+                {
+                    @foreach (var item in Model.CollectionB.ToList())
+                    {
+
+                        <li>
+                            @Html.DisplayFor(modelItem => item.QouteID)
+                            -
+                            @Html.DisplayFor(modelItem => item.QouteText)
+                            <input type="button"
+                                   value="Acknowledge"
+                                   onclick="location.href='@Url.Action("Index", new { id = item.QouteID })'">
+                        </li>
+
+                    }
+                }
+                </ul>
+
+        </div>
     </div>

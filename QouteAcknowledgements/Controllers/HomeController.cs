@@ -9,6 +9,13 @@ using QouteAcknowledgements.Models;
 
 namespace QouteAcknowledgements.Controllers
 {
+    public class ExampleViewModel
+    {
+        // Example collections for each of your types
+        public IEnumerable<QouteAcknowledgements.Models.Qoute> CollectionA { get; set; }
+        public IEnumerable<QouteAcknowledgements.Models.Qoute> CollectionB { get; set; }
+    }
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -37,8 +44,18 @@ namespace QouteAcknowledgements.Controllers
                 // reinitialise data going to view
                 db = new QouteDBContext();
             }
+            /* for the moment I am just going to put them in a stack */
             
-            return View(db.UnacknowledgedQoutes);
+            // Build the model
+            var model = new ExampleViewModel()
+            {
+
+                // You'll likely want a .ToList() after these to ensure things work as expected
+                CollectionA = db.UnacknowledgedQoutes,
+                CollectionB = db.AcknowledgedQoutes,
+            };
+     
+            return View(model);
         }
 
 
