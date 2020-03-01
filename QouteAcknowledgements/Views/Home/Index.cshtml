@@ -1,58 +1,58 @@
-﻿@model QouteAcknowledgements.Controllers.ExampleViewModel
-    @{
-        ViewData["Title"] = "Home Page";
-    }
+﻿@model QouteAcknowledgements.Controllers.VariableContainer
+@{
+    ViewData["Title"] = "Home Page";
+}
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-        <h2> Whats the craic bois??</h2>
-        <input type="button"
-               value="Reset"
-               onclick="location.href='@Url.Action("Index", new { id = -1 })'">
-        
-        <div>
-            <ul style="width:45%; float:left;">
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2> Whats the craic bois??</h2>
+    <input type="button"
+           value="Reset"
+           onclick="location.href='@Url.Action("Index", new { id = -1 })'">
 
-                @if (Model.CollectionA != null)
+    <div>
+        <ul style="width:45%; float:left;">
+
+            @if (Model.UnacknowledgedQoutes != null)
+            {
+
+                @foreach (var item in Model.UnacknowledgedQoutes.ToList())
                 {
 
-                    @foreach (var item in Model.CollectionA.ToList())
-                    {
-
-                        <li>
-                            @Html.DisplayFor(modelItem => item.QouteID)
-                            -
-                            @Html.DisplayFor(modelItem => item.QouteText)
-                            <input type="button"
-                                   value="Acknowledge"
-                                   onclick="location.href='@Url.Action("Index", new { id = item.QouteID })'">
+                    <li>
+                        @Html.DisplayFor(modelItem => item.QouteID)
+                        -
+                        @Html.DisplayFor(modelItem => item.QouteText)
+                        <input type="button"
+                               value="Acknowledge"
+                               onclick="location.href='@Url.Action("Index", new { id = item.QouteID })'">
 
 
-                        </li>
+                    </li>
 
-                    }
                 }
-            </ul>
+            }
+        </ul>
 
-            <ul style="width:45%; float:right;">
-                @if (Model.CollectionB!= null)
+        <ul style="width:45%; float:right;">
+            @if (Model.AcknowledgedQoutes != null)
+            {
+                @foreach (var item in Model.AcknowledgedQoutes.ToList())
                 {
-                    @foreach (var item in Model.CollectionB.ToList())
-                    {
 
-                        <li>
-                            @Html.DisplayFor(modelItem => item.QouteID)
-                            -
-                            @Html.DisplayFor(modelItem => item.QouteText)
-                            <input type="button"
-                                   value="Acknowledge"
-                                   onclick="location.href='@Url.Action("Index", new { id = item.QouteID })'">
-                        </li>
+                    <li>
+                        @Html.DisplayFor(modelItem => item.QouteID)
+                        -
+                        @Html.DisplayFor(modelItem => item.QouteText)
+                        <input type="button"
+                               value="Acknowledge"
+                               onclick="location.href='@Url.Action("Index", new { id = item.QouteID })'">
+                    </li>
 
-                    }
                 }
-                </ul>
+            }
+        </ul>
 
-        </div>
     </div>
+</div>

@@ -92,13 +92,13 @@ namespace QouteAcknowledgements.Models
         }
 
 
-        public List<Qoute> getUnacknowledgedQuotes()
+        public List<Qoute> GetUnacknowledgedQuotes()
         {
             string query = "SELECT * FROM qoutes where acknowledged = 0";
 
             //Create a list to store the result
             List<Qoute> list = new List<Qoute>();
-          
+
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -112,10 +112,11 @@ namespace QouteAcknowledgements.Models
                 while (dataReader.Read())
                 {
                     // temporary variable for readabilty
-                    Qoute newQuote = new Qoute { 
-                        QouteID = (int) dataReader["id"], 
-                        QouteText = (string) dataReader["quote"], 
-                        QuoteAcknowledment = (bool)dataReader["acknowledged"] 
+                    Qoute newQuote = new Qoute
+                    {
+                        QouteID = (int)dataReader["id"],
+                        QouteText = (string)dataReader["quote"],
+                        QuoteAcknowledment = (bool)dataReader["acknowledged"]
                     };
                     list.Add(newQuote);
                 }
@@ -135,7 +136,7 @@ namespace QouteAcknowledgements.Models
             }
         }
 
-        public List<Qoute> getAcknowledgedQuotes()
+        public List<Qoute> GetAcknowledgedQuotes()
         {
             string query = "SELECT * FROM qoutes where acknowledged = 1";
 
@@ -179,11 +180,9 @@ namespace QouteAcknowledgements.Models
             }
         }
 
-        public void resetQuotes()
+        public void ResetQuotes()
         {
             string query = "UPDATE qoutes SET acknowledged = 0";
-
-           
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -192,24 +191,16 @@ namespace QouteAcknowledgements.Models
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 //Create a data reader and Execute the command
                 cmd.ExecuteReader();
-              
-                
-
                 //close Connection
                 this.CloseConnection();
-
-                //return list to be displayed
-               
             }
         }
 
 
 
-        public void acknowledgeQuote(int id)
+        public void AcknowledgeQuoteQuery(int id)
         {
-            string query = "UPDATE qoutes SET acknowledged = 1 where id = "+id;
-
-
+            string query = "UPDATE qoutes SET acknowledged = 1 where id = " + id;
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -221,49 +212,41 @@ namespace QouteAcknowledgements.Models
 
                 //close Connection
                 this.CloseConnection();
-
-               
 
             }
         }
 
     }
 
-        public class QouteDBContext: DbContext
-        {
+    public class QouteDBContext : DbContext
+    {
         private List<Qoute> unacknowledgedQoutes;
         private List<Qoute> acknowledgedQoutes;
 
         public List<Qoute> UnacknowledgedQoutes { get => unacknowledgedQoutes; set => unacknowledgedQoutes = value; }
         public List<Qoute> AcknowledgedQoutes { get => acknowledgedQoutes; set => acknowledgedQoutes = value; }
 
-        /* constructor that populates the qoutes dbset */
+        /* constructor that populates the qoutes lists */
         public QouteDBContext()
-            {
-
-
+        {
             DBConnect connectionToDatabase = new DBConnect();
-            List<Qoute> listOfUnAcknowledgedQoutes = connectionToDatabase.getUnacknowledgedQuotes();
-            List<Qoute> listOfAcknowledgedQoutes = connectionToDatabase.getAcknowledgedQuotes();
+            UnacknowledgedQoutes = connectionToDatabase.GetUnacknowledgedQuotes();
+            acknowledgedQoutes = connectionToDatabase.GetAcknowledgedQuotes();
+            this.SaveChanges();
+        }
 
-            UnacknowledgedQoutes = listOfUnAcknowledgedQoutes;
-            acknowledgedQoutes = listOfAcknowledgedQoutes;
-                //UnacknowledgedQoutes.Add(TestQuote);
-                this.SaveChanges();
-            }
+        public void ResetData()
+        {
+            DBConnect connectionToDatabase = new DBConnect();
+            connectionToDatabase.ResetQuotes();
+        }
 
-            public void reset()
-            {
-                DBConnect connectionToDatabase = new DBConnect();
-                connectionToDatabase.resetQuotes();
-            }
-
-            public void acknowledgeQuote(int id)
-            {
-                DBConnect connectionToDatabase = new DBConnect();
-                connectionToDatabase.acknowledgeQuote(id);
-            }
+        public void AcknowledgeQuote(int id)
+        {
+            DBConnect connectionToDatabase = new DBConnect();
+            connectionToDatabase.AcknowledgeQuoteQuery(id);
+        }
     }
-  
+
 
 }

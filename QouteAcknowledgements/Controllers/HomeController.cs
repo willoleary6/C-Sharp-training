@@ -9,11 +9,13 @@ using QouteAcknowledgements.Models;
 
 namespace QouteAcknowledgements.Controllers
 {
-    public class ExampleViewModel
+
+    // setting up an object that can store multiple variables
+    public class VariableContainer
     {
         // Example collections for each of your types
-        public IEnumerable<QouteAcknowledgements.Models.Qoute> CollectionA { get; set; }
-        public IEnumerable<QouteAcknowledgements.Models.Qoute> CollectionB { get; set; }
+        public IEnumerable<QouteAcknowledgements.Models.Qoute> UnacknowledgedQoutes { get; set; }
+        public IEnumerable<QouteAcknowledgements.Models.Qoute> AcknowledgedQoutes { get; set; }
     }
 
     public class HomeController : Controller
@@ -25,9 +27,7 @@ namespace QouteAcknowledgements.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            Debug.WriteLine("test!");
         }
-
 
 
         public IActionResult Index(int? id)
@@ -38,26 +38,23 @@ namespace QouteAcknowledgements.Controllers
                 // reset list
                 if (id < 0)
                 {
-                    db.reset();
+                    db.ResetData();
                 }
                 else
                 {
-                    Debug.WriteLine("ACKING");
-                    db.acknowledgeQuote((int)id);
+                    db.AcknowledgeQuote((int)id);
                 }
-                Debug.WriteLine("Well cowboy " + id);
                 // reinitialise data going to view
                 db = new QouteDBContext();
             }
-            /* for the moment I am just going to put them in a stack */
-
-            // Build the model
-            var model = new ExampleViewModel()
+      
+            // Build a view model
+            var model = new VariableContainer()
             {
 
                 // You'll likely want a .ToList() after these to ensure things work as expected
-                CollectionA = db.UnacknowledgedQoutes,
-                CollectionB = db.AcknowledgedQoutes,
+                UnacknowledgedQoutes = db.UnacknowledgedQoutes,
+                AcknowledgedQoutes = db.AcknowledgedQoutes,
             };
 
             return View(model);
